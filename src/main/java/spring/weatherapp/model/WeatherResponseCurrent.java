@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 @Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WeatherResponse {
+public class WeatherResponseCurrent {
     @JsonProperty("coord")
     private Coord coord;
 

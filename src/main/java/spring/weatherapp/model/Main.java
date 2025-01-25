@@ -10,6 +10,9 @@ import lombok.Setter;
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Main {
+    @JsonProperty("temp")
+    private double temp;
+    
     @JsonProperty("feels_like")
     private double feelsLike;
 
