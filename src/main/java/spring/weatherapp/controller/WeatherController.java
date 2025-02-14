@@ -6,9 +6,6 @@ import spring.weatherapp.model.WeatherResponseCurrent;
 import spring.weatherapp.model.WeatherResponseDaily;
 import spring.weatherapp.service.WeatherService;
 
-import java.util.List;
-import java.util.Map;
-
 
 @RestController
 @RequestMapping("/")

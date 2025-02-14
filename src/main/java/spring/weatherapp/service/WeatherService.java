@@ -7,9 +7,6 @@ import org.springframework.web.client.RestTemplate;
 import spring.weatherapp.model.WeatherResponseCurrent;
 import spring.weatherapp.model.WeatherResponseDaily;
 
-import java.text.SimpleDateFormat;
-import java.util.*;
-
 @Service
 public class WeatherService {
     @Value("${openweather.api.key}")
@@ -27,9 +24,7 @@ public class WeatherService {
         return restTemplate.getForObject(url, WeatherResponseCurrent.class);
     }
 
-    // Lấy dữ liệu dự báo 7 ngày và chuyển đổi ngày trong tuần
-    public WeatherResponseDaily
-    getWeatherResponseDaily(String city) {
+    public WeatherResponseDaily getWeatherResponseDaily(String city) {
         String url = apiUrl + "forecast?q=" + city + "&units=metric&cnt=81&appid=" + apiKey;
         System.out.println(url);
         return restTemplate.getForObject(url, WeatherResponseDaily.class);
