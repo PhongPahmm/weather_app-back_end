@@ -20,13 +20,11 @@ public class WeatherService {
 
     public WeatherResponseCurrent getWeatherResponseCurrent(String city) {
         String url = apiUrl + "weather?q=" + city + "&units=metric&appid=" + apiKey;
-        System.out.println(url);
         return restTemplate.getForObject(url, WeatherResponseCurrent.class);
     }
 
     public WeatherResponseDaily getWeatherResponseDaily(String city) {
         String url = apiUrl + "forecast?q=" + city + "&units=metric&cnt=81&appid=" + apiKey;
-        System.out.println(url);
         return restTemplate.getForObject(url, WeatherResponseDaily.class);
     }
 }
